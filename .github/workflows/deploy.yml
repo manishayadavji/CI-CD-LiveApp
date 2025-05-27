@@ -19,7 +19,7 @@ jobs:
         ssh-private-key: ${{ secrets.EC2_KEY }}
         remote-user: ubuntu
         server-ip: ${{ secrets.EC2_IP }}
-        remote-path: /home/ubuntu/CI-CD-LiveApp
+        remote-path: /home/ubuntu/ci-cd-liveapp 
     - name: SSH & Restart App (Optional)
       uses: appleboy/ssh-action@master
       with:
@@ -27,7 +27,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_KEY }}
         script: |
-          cd /home/ubuntu/weather-app
+          cd /home/ubuntu/ci-cd-liveapp 
           pip3 install -r requirements.txt
           nohup python3 app.py > output.log 2>&1 &
 
