@@ -1,15 +1,19 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CI-CD Live App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CI-CD Live App - Manisha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Motivational Quote</h1>
-    <p style="font-size: 20px;">{{ quote }}</p>
-    <form method="get">
-        <button type="submit">New Quote</button>
-    </form>
+    <div class="container">
+        <h1>Welcome to Manisha's Motivational Quotes App</h1>
+        <p class="quote">{{ quote }}</p>
+        <form method="get">
+            <button type="submit" class="btn">New Quote</button>
+        </form>
+    </div>
 </body>
 </html>
 
